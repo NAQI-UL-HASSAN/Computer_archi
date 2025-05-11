@@ -1,0 +1,9 @@
+- Place the xyz folder in the Local Disk of your laptop (mostly C:)
+
+- prac.s file in the src folder contains the assembly code.
+
+- double click on the AsmToMachine.bat file to generate machine code (only if Python 3 is installed)
+
+- prac.dumb file in the build folder contains the machine code.
+
+- For ease, this machine code is provided in InstructionMemory.txt. Place this file where the project is created to load in inst memory.
