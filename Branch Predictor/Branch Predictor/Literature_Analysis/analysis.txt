@@ -1,0 +1,23 @@
+- did not use static branch prediction because it cannot adapt to dynamic changes in branch behavior. this can be mitigated by a dynamic compiler, but not at a fine granularity and it has its overheads.
+- static BP is at compile time.
+- dynamic BP is at runtime. less work for the compiler.
+- dynamic more powerful than static as it predicts based on the history of the branches and dynamic behavior wala problem bhi solved.
+
+###### Last time prediction
+- good for large forloops 
+- miss predicticts first and last condition of loop. (N-2)/N accuracy
+- CPI 1.06 85% accuracy
+
+###### Two bit Counter
+- (N-1)/N accuracy if start for weakly taken.
+- CPI 1.04 90% accuracy
+- trade off hardware cost
+
+###### Global/Local Branch Correlation 
+- complex and extra extra hardware
+- accuracy good
+
+###### Hybrid Branch Correlation 
+- longer access latency
+
+will use 2bit because its a balance between hardware and accuracy (3 stage pipeline).
