@@ -1,0 +1,20 @@
+module IF_ID (
+    input  var logic        clk,
+    input  var logic        flush,
+    input  var logic        rst,
+    input  var logic [31:0] instd,
+    input  var logic [31:0] pcd,
+    output var logic [31:0] instq,
+    output var logic [31:0] pcq
+);
+    always_ff @(posedge clk) begin
+        if (rst) begin 
+            pcq   <= 32'b0;
+            instq <= 32'b0;
+        end
+        else begin
+            pcq   <= pcd;
+            instq <= instd;
+        end
+    end
+endmodule
